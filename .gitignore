@@ -98,5 +98,12 @@ __blobstorage__
 __queuestorage__
 __azurite_db*__.json
 
-# Misc
-/deploy.sh
+# Ignore sensitive terraform files
+*.tfvars
+*.tfstate
+*.tfstate.backup
+terraform/.terraform*
+
+ 
+# misc
+.DS_Store

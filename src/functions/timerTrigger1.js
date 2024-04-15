@@ -2,7 +2,7 @@ const { app } = require('@azure/functions');
 const { chromium, expect } = require('@playwright/test');
 const appInsights = require("applicationinsights");
 const { v4 } = require('uuid');
-var telemetryClient = new appInsights.TelemetryClient(process.env.APPINSIGHTS_INSTRUMENTATIONKEY);
+var telemetryClient = new appInsights.TelemetryClient(process.env.APPINSIGHTS_CONNECTIONSTRING);
 const Stopwatch = require('statman-stopwatch');
 
 async function executeTest(context, myTimer) {
@@ -54,7 +54,7 @@ async function executeTest(context, myTimer) {
 }
 
 app.timer('timerTrigger1', {
-    schedule: '0 */1 * * * *',
+    schedule: '0 */10 * * * *',
     handler: executeTest
 });
 
