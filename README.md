@@ -1,6 +1,6 @@
 # Playwright testing with azure functions
 
-This is an example Azure project that does frontend testing using [Playwright](https://playwright.dev/), [Azure Functions](https://learn.microsoft.com/en-us/azure/azure-functions/functions-overview), and [Application Insights](https://learn.microsoft.com/en-us/azure/azure-monitor/app/app-insights-overview).
+This is an example Azure project that does frontend testing using [Playwright](https://playwright.dev/), [Azure Functions](https://learn.microsoft.com/en-us/azure/azure-functions/functions-overview), and [Application Insights](https://learn.microsoft.com/en-us/azure/azure-monitor/app/app-insights-overview). This is an implementation based on the blog article from Talha Khaild [Availability test with Node.js and Playwright for Application Insights](https://medium.com/@talhakhalid101/availability-test-with-node-js-and-playwright-for-application-insights-85a4c1d724e7)
 
 A timer based function app will run a playwright frontend test written in javascript. Test results will be pushed as availability telemetry to the App Insights service.
 
