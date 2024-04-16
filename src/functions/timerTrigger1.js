@@ -49,7 +49,6 @@ async function executeTest(context, myTimer) {
         availabilityTelemetry.duration = elapsed;
         telemetryClient.trackAvailability(availabilityTelemetry);
         await browser.close();
-        // context.done();
     }
 }
 
