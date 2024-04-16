@@ -27,15 +27,16 @@ async function executeTest(context, myTimer) {
 
     try {
 
-        //Create playwright flow        
+        //Start: Playwright test code
+        
         const page = await browser.newPage();
         stopwatch.start();
-        console.log(`Navigating to: ${process.env.WEB_URL}`);
         await page.goto(process.env.WEB_URL);
         var title = await page.title();
         await expect(title).toBe('Bing');
-        console.log('Title: ' + title);
         availabilityTelemetry.success = true;
+
+        //End: Playwright test code
 
     } catch (error) {
         console.log('Error: ' + error);

@@ -1,7 +1,7 @@
-# Test specific variables for bing availability test
+# Test specific variables for availability test function app
 
 variable "function_name" {
-  default     = "bing-tester"
+  default     = "availability-tester"
   description = "Prefix for the function name"
 }
 
